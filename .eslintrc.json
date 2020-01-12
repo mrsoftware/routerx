@@ -1,0 +1,64 @@
+{
+	"extends": [
+		"airbnb-typescript"
+	],
+	"parser": "@typescript-eslint/parser",
+	"plugins": [
+		"react",
+		"jsx-a11y",
+		"import"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"no-tabs": "off",
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"max-len": "off",
+		"react/jsx-indent": [
+			2,
+			"tab"
+		],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".ts",
+					".tsx"
+				]
+			}
+		],
+		"react/jsx-indent-props": [
+			2,
+			"tab"
+		],
+		"object-curly-newline": "off",
+		"@typescript-eslint/indent": [
+			"error",
+			"tab"
+		],
+		"import/prefer-default-export": "off",
+		"@typescript-eslint/camelcase": "off",
+		"no-nested-ternary": "off",
+		"react/jsx-one-expression-per-line": "off",
+		"react/prefer-stateless-function": "off"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}
