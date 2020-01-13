@@ -10,14 +10,19 @@ The RouterX is an abstraction layer and helper for react-native-navigation
 Using npm:
 
 ```bash
-$ npm install routerx
+$ npm install @mrsoftware/routerx
 ```
 
 Using yarn:
 
 ```bash
-$ yarn add routerx
+$ yarn add @mrsoftware/routerx
 ```
+
+## Author
+
+Mohammad Rajabloo ([@mrsoftware](https://github.com/mrsoftware))
+
 
 ## License
 
