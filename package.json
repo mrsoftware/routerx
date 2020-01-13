@@ -23,8 +23,6 @@
 	},
 	"dependencies": {
 		"debug": "^4.1.1",
-		"react": "^16.12.0",
-		"react-native": "*",
-		"react-native-navigation": "^2.x.x"
+		"react": "^16.12.0"
 	}
 }
