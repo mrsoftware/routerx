@@ -18,7 +18,7 @@ describe('Route', () => {
 		expect(mainRoute.getName()).toBe('GuestًRoute');
 	});
 
-	test('Create new Route Tree', () => {
+	test('Create new Route Tree with BottomTabs', () => {
 		const home = new Component('Home', () => Home, undefined, { bottomTab: { icon: 'home' } });
 		const homeStack = new Stack('HomeStack');
 		const rootBT = new BottomTabs('RootBottomTabs');
@@ -49,6 +49,32 @@ describe('Route', () => {
 									},
 								},
 							],
+						},
+					},
+				],
+			},
+		};
+
+		expect(mainRoute.root).toMatchObject(tree);
+	});
+
+	test('Create new Route Tree with Stack', () => {
+		const home = new Component('Home', () => Home);
+		const homeStack = new Stack('HomeStack');
+		const mainRoute = new Route('MainRoute');
+
+		homeStack.addComponent(home);
+		mainRoute.addStack(homeStack);
+
+		const tree = {
+			stack: {
+				id: 'HomeStack',
+				children: [
+					{
+						component: {
+							id: 'Home',
+							name: 'Home',
+							options: {},
 						},
 					},
 				],

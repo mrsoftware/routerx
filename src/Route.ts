@@ -1,5 +1,6 @@
 import { IRoute } from './models/Route';
 import { IBootomTabs } from './models/layout/BottomTabs';
+import { IStack } from './models/layout/Stack';
 
 class Route implements IRoute {
 	// Name of Route
@@ -35,6 +36,17 @@ class Route implements IRoute {
 	 */
 	public addBottomTabs = (bottomTabs: IBootomTabs): this => {
 		this.root = { ...this.root, bottomTabs };
+		return this;
+	};
+
+	/**
+	 * Add new Stack to Tree
+	 *
+	 * @param stack IStack
+	 * @returns this Route
+	 */
+	public addStack = (stack: IStack): this => {
+		this.root = { ...this.root, stack };
 		return this;
 	};
 }
