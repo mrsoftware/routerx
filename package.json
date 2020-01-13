@@ -8,10 +8,14 @@
 	"author": "Mohammad Rajabloo <themrsoftware@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"build": "tsc"
+		"build": "tsc",
+		"test": "jest",
+		"test:watch": "npm test -- --watch",
+		"test:cov": "npm test -- --coverage"
 	},
 	"devDependencies": {
 		"@types/debug": "^4.1.5",
+		"@types/jest": "^24.0.25",
 		"@types/react": "^16.9.17",
 		"@typescript-eslint/eslint-plugin": "^2.14.0",
 		"eslint": "^6.8.0",
@@ -19,6 +23,8 @@
 		"eslint-plugin-import": "^2.19.1",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-react": "^7.17.0",
+		"jest": "^24.9.0",
+		"ts-jest": "^24.3.0",
 		"typescript": "^3.7.4"
 	},
 	"dependencies": {
