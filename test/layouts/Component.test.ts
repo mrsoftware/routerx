@@ -12,4 +12,10 @@ describe('Component', () => {
 		expect(home.name).toBe('Home');
 		expect(home.id).toBe('Home');
 	});
+
+	test('Expect to options works', () => {
+		const options = { bottomTab: { icon: 'home' } };
+		const home = new Component('Home', () => home, undefined, options);
+		expect(home.options).toBe(options);
+	});
 });
