@@ -1,5 +1,5 @@
 {
-	"name": "routerx",
+	"name": "@mrsoftware/routerx",
 	"version": "0.1.0",
 	"description": "The RouterX is an abstraction layer and helper for react-native-navigation",
 	"main": "./dist/index.js",
@@ -11,7 +11,8 @@
 		"build": "tsc",
 		"test": "jest",
 		"test:watch": "npm test -- --watch",
-		"test:cov": "npm test -- --coverage"
+		"test:cov": "npm test -- --coverage",
+		"publish:npm": "npm run build && npm publish --access=public"
 	},
 	"devDependencies": {
 		"@types/debug": "^4.1.5",
