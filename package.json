@@ -1,6 +1,6 @@
 {
 	"name": "@mrsoftware/routerx",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "The RouterX is an abstraction layer and helper for react-native-navigation",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -15,21 +15,25 @@
 		"publish:npm": "npm run build && npm publish --access=public"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.8.3",
+		"@babel/preset-env": "^7.8.3",
 		"@types/debug": "^4.1.5",
 		"@types/jest": "^24.0.25",
 		"@types/react": "^16.9.17",
 		"@typescript-eslint/eslint-plugin": "^2.14.0",
+		"babel-jest": "^25.1.0",
 		"eslint": "^6.8.0",
 		"eslint-config-airbnb-typescript": "^6.3.1",
 		"eslint-plugin-import": "^2.19.1",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-react": "^7.17.0",
 		"jest": "^24.9.0",
-		"ts-jest": "^24.3.0",
 		"typescript": "^3.7.4"
 	},
 	"dependencies": {
 		"debug": "^4.1.1",
-		"react": "^16.12.0"
+		"react": "^16.12.0",
+		"react-native": "^0.61.5",
+		"react-native-navigation": "^4.5.3"
 	}
 }
