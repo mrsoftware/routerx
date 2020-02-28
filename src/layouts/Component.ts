@@ -1,6 +1,6 @@
-import { Navigation } from 'react-native-navigation';
 import { ComponentProvider } from '../models/Component';
 import { IComponent } from '../models/layout/Component';
+import { WixReactNativeNavigation } from '../models/RouterX';
 
 class Component implements IComponent {
 	// Name of Component
@@ -17,18 +17,15 @@ class Component implements IComponent {
 
 	private concreteComponent?: ComponentProvider;
 
-	public registredComponent: ComponentProvider;
-
 	constructor(name: string | number, componentProvider: ComponentProvider, concreteComponentProvider?: ComponentProvider, options: any = {}) {
 		this.name = name;
 		this.id = name;
 		this.component = componentProvider;
 		this.concreteComponent = concreteComponentProvider;
 		this.options = options;
-		this.registredComponent = this.registerComponent();
 	}
 
-	private registerComponent = ():ComponentProvider => Navigation.registerComponent(this.name, this.component, this.concreteComponent);
+	public register = (wix: WixReactNativeNavigation):ComponentProvider => wix.registerComponent(this.name, this.component, this.concreteComponent);
 }
 
 
